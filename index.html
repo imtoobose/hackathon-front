@@ -16,7 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-
+    <link href="css/home.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -71,11 +72,92 @@
                         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <h1>
+                            Your Accounts
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row" id="accountDivContainer">
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 accountDiv">
+                        <a href="#" class="accountWrap healthy">
+                            <div class="accountName">
+                            Account #56340
+                            </div>
+                            <div class="balance">
+                                33000
+                            </div>
+                            <div class="min-balance">
+                            20000
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 accountDiv">
+                        <a href="#" class="accountWrap moderate">
+                            <div class="accountName">
+                            Account 2                            
+                            </div>
+                            <div class="balance">
+                                <div class="accountDetailName">
+                                    Current Balance
+                                </div>
+                                <div class="balanceValue accountValue">    
+                                    45000 $
+                                </div>
+                            </div>
+
+                            <div class="min-balance">
+                                <div class="accountDetailName">
+                                    Minimum Balance
+                                </div>
+                                <div class="minbalanceValue accountValue">    
+                                    42000 $
+                                </div>
+                            </div>
+
+                            <div class="account-status">
+                                <div class="accountDetailName">
+                                    Health
+                                </div>
+                                <div class="healthValue">
+                                    Moderate
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 accountDiv">
+                        <a href="#" class="accountWrap danger">
+                            <div class="accountName">
+                            Account 3                            
+                            </div>
+                            <div class="balance">
+                                50000
+                            </div>
+                            <div class="min-balance">
+                                60000
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 accountDiv">
+                        <a href="#" class="accountWrap healthy">
+                            <div class="accountName">
+                            Account 4                            
+                            </div>
+                            <div class="balance">
+                                90000
+                            </div>
+                            <div class="min-balance">
+                                100000
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
                 </div>
@@ -92,7 +174,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="js/workingfiddle.js"></script>
+    <script src="js/workingfiddle.js"></script>
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
@@ -100,7 +182,5 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
-
 </body>
-
 </html>

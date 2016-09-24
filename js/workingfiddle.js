@@ -1,3 +1,5 @@
+var sortedData = undefined;
+
 $(function () {
     $('#container').highcharts({
         chart: {
@@ -5,6 +7,9 @@ $(function () {
         },
         title: {
             text: 'Account balance over time'
+        },
+        credits:{
+          enabled: false
         },
         xAxis: {
             type: 'datetime',
@@ -22,7 +27,7 @@ $(function () {
             },
         },
         tooltip: {
-            headerFormat: '<b>{series.name}</b><br>',
+            headerFormat: '<b>$ {series.name}</b><br>',
             pointFormat: '{point.x:%e. %b}: {point.y}$'
         },
 
@@ -54,13 +59,9 @@ function createAccount(arr){
     for(var j =0; j<innerarr.length; j++){
       var a  = innerarr[j];
       var d  = (new Date(a.month + ' '+ a.date + ', 2015')).getTime();
-      //console.log(d);
-      
       ans[i].data.push([+d, +a.balance]);
     }
   }
-
-  //var chartconfig = createConfig(ans);
   return ans;
 }
 
@@ -82,6 +83,16 @@ function sortValues(jsondata, callback){
         })
       );
   }
-
-  return callback(sortedarrays);
+  sortedData = callback(sortedarrays);
+  return sortedData;
 }
+
+function generateAccountDivs(howMany, accountData){
+  var Status = ['moderate', 'danger', 'healthy'];
+  for (var i = 0; i<howMany; i++){
+    StatusVal = Status[Math.floor(Math.random()*Status.length)];
+    $("#accountDivContainer").append(('<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 accountDiv"> <a href="#" class="accountWrap ' + StatusVal + '"> <div class="accountName"> Account 2 </div> <div class="balance"> <div class="accountDetailName"> Current Balance </div> <div class="balanceValue accountValue"> 45000 $ </div> </div> <div class="min-balance"> <div class="accountDetailName"> Minimum Balance </div> <div class="minbalanceValue accountValue"> 42000 $ </div> </div> <div class="account-status"> <div class="accountDetailName"> Health </div> <div class="healthValue"> '+ StatusVal +'</div> </div> </a> </div>'));
+  }
+}
+
+generateAccountDivs(10);

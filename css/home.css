@@ -1,0 +1,71 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid rgba(0,0,0, 0.2) 2px;
+}
+
+.accountWrap {
+  display: block;
+  color: black;
+  text-decoration: none;
+  border: solid black 2px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.accountWrap:link, .accountWrap:hover, .accountWrap:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.accountWrap:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.accountWrap.healthy {
+  border-color: #70C1B3;
+}
+
+.accountWrap.danger {
+  border-color: #F25F5C;
+}
+
+.accountWrap.moderate {
+  border-color: #FFE066;
+}
+
+.accountDiv {
+  margin-bottom: 10px;
+}
+
+.accountWrap > * {
+  padding: 10px;
+}
+
+.accountWrap > .accountName {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: white;
+}
+
+.accountWrap.healthy > .accountName {
+  background: #70C1B3;
+}
+
+.accountWrap.danger > .accountName {
+  background: #F25F5C;
+}
+
+.accountWrap.moderate > .accountName {
+  background: #FFE066;
+}
+
+.accountDetailName{
+  font-size: 1.2em;
+  font-weight: 700;
+}
