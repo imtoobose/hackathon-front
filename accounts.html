@@ -129,7 +129,7 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    function createData(a,e){var t=[];t.push({name:"Actual Currency",data:[]}),t.push({name:"Predicted Currency",data:[]});var r=0;for(var i in a)if(r+=1,t[0].data.push(a[i]),45==r)break;r=0;for(i in e)if(r+=1,t[1].data.push(e[i]),51==r)break;return t}$(function(){for(var a=[],e=(new Date("Aug 1, 2015"),0);50>e;e++)a.push(e);$("#currency-chart").highcharts({title:{text:"Currency Prediction Curve",x:-20},xAxis:{categories:a},yAxis:{title:{text:"Base Currency EUR"},plotLines:[{value:0,width:1,color:"#808080"}]},tooltip:{valueSuffix:"$"},legend:{layout:"vertical",align:"right",verticalAlign:"middle",borderWidth:0},series:createData(jsondata,preddata)})});
+    function createData(a,e){var t=[];t.push({name:"Actual Currency",data:[]}),t.push({name:"Predicted Currency",data:[]});var r=0;for(var i in a)if(r+=1,t[0].data.push(a[i]),45==r)break;r=0;for(i in e)if(r+=1,t[1].data.push(e[i]),51==r)break;return t}$(function(){for(var a=[],e=(new Date("Aug 1, 2015"),0);50>e;e++)a.push(e);$("#currency-chart").highcharts({title:{text:"Future's Analysis",x:-20},xAxis:{categories:a},yAxis:{title:{text:"Base Currency EUR"},plotLines:[{value:0,width:1,color:"#808080"}]},tooltip:{valueSuffix:"$"},legend:{layout:"vertical",align:"right",verticalAlign:"middle",borderWidth:0},series:createData(jsondata,preddata)})});
 
     createData(jsondata,preddata);
 
