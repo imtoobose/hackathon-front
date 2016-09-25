@@ -20,10 +20,12 @@ h2{
   background: #F25F5C;
   color: white;
 }
+
 .alert > h3{
   font-size: 1.7em;
   font-weight: 700;
 }
+
 .alert >  h4> a{
   color: white;
   text-decoration: underline;

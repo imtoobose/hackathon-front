@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Account Information</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body{
+            background: #E63946;
+            font-family: 'Open Sans', serif;
+        }
+    </style>
+
+    <div id="wrapper" >
+        <!-- style="max-width: 960px; margin: 0 auto;" -->
+        
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Treasury
+                    </a>
+                </li>
+                <li>
+                    <a href="#menu-toggle" class="toggle-button" id="menu-toggle">Toggle Menu</a>
+                </li>
+                <li>
+                    <a href="/">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-0 col-lg-1">
+                    </div>
+
+                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-10 center-block" style="background:#F1FAEE; margin: 0 auto; position: relative; border-radius: 10px; box-shadow: 0px 2px 3px rgba(0,0,0,0.2);">
+
+                        <div class="row" style="border-bottom: solid rgba(0,0,0,0.2) 2px; padding-bottom: 15px;"> 
+                            <div class="circle center-block" style="margin-top: 30px; background:rgba(0,0,0,0.1); border-radius: 50%; height: 100px; width: 100px;">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Name
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{nickname}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Credit Card Max Spend Limit
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{card_spend_limit}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Credit Card Current Balance
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{card_balance}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Current Account Balance
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{curr_acount_balance}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Overdraft Limit
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{curr_overdraft_limit}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Card Max Spend Limit
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{card_spend_limit}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Saving Account Balance
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{saving_account_balance}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"> </div>
+                            <div class="col-lg-10">
+                                <div class="row" style="padding-top: 10px; padding-bottom:10px;">
+                                    <div class="col-lg-6" style="border-right: solid rgba(0,0,0,0.2) 1px; text-align: left; font-size: 1.2em; font-weight: 700;">
+                                        Card Max Spend Limit
+                                    </div>
+                                    <div class="col-lg-6" style="text-align: right;">
+                                        {{card_spend_limit}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"> </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-0 col-lg-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+    $(".toggle-button").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+</html>
