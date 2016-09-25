@@ -53,12 +53,22 @@ h1{
   color: white;
 }
 
+.accountWrap > .accountName > .ion{
+  float: right;
+}
+
 .accountWrap.healthy > .accountName {
   background: #70C1B3;
 }
 
-.accountWrap.danger > .accountName {
+.accountWrap.danger > .balance, .accountWrap.danger > .min-balance, .accountWrap.danger > .account-status{
   background: #F25F5C;
+  color: #FFF;
+}
+
+.accountWrap.danger > .accountName {
+  background: #FFF;
+  color: #F25F5C; 
 }
 
 .accountWrap.moderate > .accountName {
