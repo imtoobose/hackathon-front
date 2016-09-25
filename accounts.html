@@ -57,12 +57,6 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2> Account trend </h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
                         <div class="account-chart">
                         </div>
                     </div>
@@ -80,6 +74,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div id="alert" class = "col-lg-12 alert">
+                        <h3 class="alert-head"> 
+                            Transfer Alert!
+                            <i id="close" class="ion ion-close-circled" style="float: right; cursor: pointer;"> 
+                            </i>
+                        </h3>
+
+                        <h4 class="alert-text"> We have predicted that this account may fall below the minumum balance required. We recommend transferring from X account to <a href="#"> Y  account </a>
+                        </h4>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <h2> 
@@ -109,6 +117,10 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
+    $("#close").on('click', function(e){
+        $("#alert").fadeOut(100);
+    })
 
     var jsondata = {"42": 1.0935, "48": 1.0941, "43": 1.0925, "49": 1.0955, "24": 1.0891, "25": 1.0905, "26": 1.0933, "27": 1.0933, "20": 1.0852, "21": 1.0852, "22": 1.0886, "23": 1.0896, "46": 1.0941, "47": 1.0941, "44": 1.0945, "45": 1.0941, "28": 1.0933, "29": 1.0937, "40": 1.0969, "41": 1.0969, "1": 1.0807, "3": 1.0845, "2": 1.081, "5": 1.0852, "4": 1.0834, "7": 1.0852, "6": 1.0852, "9": 1.0899, "8": 1.0883, "39": 1.0969, "38": 1.0917, "11": 1.0859, "10": 1.0923, "13": 1.0888, "12": 1.0888, "15": 1.0893, "14": 1.0888, "17": 1.0863, "16": 1.0849, "19": 1.0852, "18": 1.0853, "31": 1.0978, "30": 1.0951, "37": 1.0891, "36": 1.0923, "35": 1.0925, "34": 1.0959, "33": 1.0959, "32": 1.0959};
 
