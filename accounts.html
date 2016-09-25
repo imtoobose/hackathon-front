@@ -23,23 +23,27 @@
 
 <body>
 
-    <div id="wrapper">
-
-        <!-- Sidebar -->
+    <div id="wrapper" >
+        <!-- style="max-width: 960px; margin: 0 auto;" -->
+        
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Treasury
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#menu-toggle" class="toggle-button" id="menu-toggle">Toggle Menu</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a href="/">Dashboard</a>
                 </li>
-                <li>
+
+                <!-- <li>
+                    <a href="/">Shortcuts</a>
+                </li> -->
+                <!-- <li>
                     <a href="#">Overview</a>
                 </li>
                 <li>
@@ -53,7 +57,7 @@
                 </li>
                 <li>
                     <a href="#">Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -65,13 +69,41 @@
                     <div class="col-lg-12 pageTitle">
                         <h1>
                             Account #32324
+                            <a href="#menu-toggle" style="float:right;" class="btn btn-primary toggle-button" id="menu-toggle">Toggle Menu</a>
                         </h1>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2> Account trend </h2>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="account-chart">
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2> Currency Trends and Predictions </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="currency-chart" class="currency-chart">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2> 
+                            Expenditure Overview
+                        </h2>
                     </div>
                 </div>
                 <div class="row">
@@ -88,9 +120,19 @@
         </div>
     </div>
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/accounts.js"> </script>
+    <script>
+    $(".toggle-button").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    function createData(a,e){var t=[];t.push({name:"Actual Currency",data:[]}),t.push({name:"Predicted Currency",data:[]});var r=0;for(var i in a)if(r+=1,t[0].data.push(a[i]),45==r)break;r=0;for(i in e)if(r+=1,t[1].data.push(e[i]),51==r)break;return t}$(function(){for(var a=[],e=(new Date("Aug 1, 2015"),0);50>e;e++)a.push(e);$("#currency-chart").highcharts({title:{text:"Currency Prediction Curve",x:-20},xAxis:{categories:a},yAxis:{title:{text:"Base Currency EUR"},plotLines:[{value:0,width:1,color:"#808080"}]},tooltip:{valueSuffix:"$"},legend:{layout:"vertical",align:"right",verticalAlign:"middle",borderWidth:0},series:createData(jsondata,preddata)})});
+
+    createData(jsondata,preddata);
+
+    </script>
 </body>
 </html>

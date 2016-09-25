@@ -35,9 +35,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#menu-toggle" class="toggle-button" id="menu-toggle">Toggle Menu</a>
                 </li>
                 <li>
+                    <a href="/">Dashboard</a>
+                </li>
+                <!-- <li>
                     <a href="#">Shortcuts</a>
                 </li>
                 <li>
@@ -54,7 +57,7 @@
                 </li>
                 <li>
                     <a href="#">Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -62,6 +65,14 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1> 
+                            Dashboard
+                            <a href="#menu-toggle" class="btn btn-primary toggle-button" id="menu-toggle" style="float: right;">Toggle Menu</a>
+                        </h1>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -77,11 +88,6 @@
                 </div>
 
                 <div class="row" id="accountDivContainer">
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -99,7 +105,7 @@
     <script src="js/workingfiddle.js"></script>
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
+    $(".toggle-button").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
